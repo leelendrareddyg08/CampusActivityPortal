@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+<title>Home Page</title>
+</h:head>
+<h:body>
+<style>
+	.tn{
+		display:flex;
+	}
+	body{
+		background-image: url("homebackground.jpeg");
+		color:white;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-size: 100% 100%;
+	}
+	
+	.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 60%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+  width: 60%;
+  color:black;
+}
+.row{
+display:flex;
+}
+
+</style>
+<div class="tn">
+<h1>Campus Activity Portal</h1>
+<h:form style="margin-top:2%; margin-left:74%;">
+	<h:commandButton action="home" value="Log Out" />
+</h:form>
+</div>
+<hr color = "red"/><hr color = "red"/>
+<h2>Select an Operation</h2>
+<h:form>
+
+<div class="row" style="margin-left:50px;">
+  <div class="column">
+    <div class="card">
+      <h3><h:commandLink action="NewActivity" value="Insert Activity" /></h3>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <h3><h:commandLink action="DeleteActivity" value="Delete Activity" /></h3>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <h3><h:commandLink action="ModifyActivity" value="Modify Activity" /></h3>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <h3><h:commandLink action="DisplayActivities" value="Display Activities" /></h3>
+    </div>
+  </div>
+</div>
+
+</h:form>
+</h:body>
+</html>

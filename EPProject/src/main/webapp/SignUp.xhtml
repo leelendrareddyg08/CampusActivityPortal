@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+<title>SignUp - CAP</title>
+<div class="navtop">
+<h1>Campus Activity Portal</h1>
+<h:form style="margin-left:70%">
+	<h:commandButton style="margin-top:25%" action="home" value="HomePage" />
+</h:form>
+</div>
+<hr color="blue"/>
+<hr color="blue"/>
+</h:head>
+<h:body>
+<style>
+	body{
+	background-image: url('LoginBackgroundImage.jpg');
+	color:white;
+}
+	.loginbox{
+		background-color: #0202025c;
+		width: 27%;
+		margin-left:10%;
+		margin-top:7%;
+		padding-top: 25px;
+		padding-bottom: 25px;
+		border-radius: 30px;
+	}
+	input{
+		margin-left:25px;
+	}
+	input[type=password]{
+		margin-left:15px;
+	}
+	.navtop{
+		display:flex;
+	}
+</style>
+<div class="loginbox">
+<center>
+<h3>SignUp</h3>
+<h:form>
+Enter Name : <h:inputText style="margin-left:30px;" value="#{signupbean.name}" id = "name" validatorMessage = "Name Should be Atleast 4 Characters"/>
+
+<h:message for="name" style="color:red"/>
+<br/>
+Enter Regd. No. : <h:inputText style="margin-left:4px;" value="#{signupbean.ID}" id = "RegdNo" validatorMessage = "Should be of minimum Size 4 digits and Maximum of 11 digits"/>
+
+<h:message for = "RegdNo" style = "color:red"/>
+<br/>
+Enter Mail ID : <h:inputText style="margin-left:17px;" value="#{signupbean.email}" id ="email" validatorMessage = "should be of min of 6 Characters"/>
+<h:message for = "email" style = "color:red" />
+<br/>
+Select Gender : <h:selectOneRadio name="gen" value="#{signupbean.gender}">
+              <f:selectItem name="gen" itemValue="Male" itemLabel="Male" />
+              <f:selectItem name="gen" itemValue="Female" itemLabel="Female" />
+</h:selectOneRadio>
+<br/>
+Mobile Number : <h:inputText style="margin-left:4px;" value = "#{signupbean.mobileNumber}" id = "mobile" validatorMessage = "Mobile Number should be of 10 digits"/>
+<h:message for = "mobile" style = "color:red"/>
+<br/>
+Your Password : <h:inputSecret style="margin-left:10px;" value = "#{signupbean.password}" id = "passsword" validatorMessage = "Should be of minimum size 8 Characters"/>
+<h:message for = "password" style = "color:red"/>
+<br/>
+<h:commandButton action="#{signupbean.getSignUpData()}" value="Sign Up" />
+<br/>
+<h:outputLabel value="#{signupbean.response}" />
+<br/>
+</h:form>
+<h:form>
+<h:commandLink action="Login" value="Press Here to Login" />
+</h:form>
+</center>
+</div>
+</h:body>
+</html>

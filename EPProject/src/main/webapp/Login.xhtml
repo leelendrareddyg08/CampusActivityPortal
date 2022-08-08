@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+<title>Login - CAP</title>
+<div class="navtop">
+<h1>Campus Activity Portal</h1>
+<h:form style="margin-left:70%">
+	<h:commandButton style="margin-top:25%" action="home" value="HomePage" />
+</h:form>
+</div>
+<hr color="blue"/>
+<hr color="blue"/>
+</h:head>
+<h:body>
+<style>
+body{
+	background-image: url('LoginBackgroundImage.jpg');
+	color:white;
+}
+	.loginbox{
+		background-color: #0202025c;
+		width: 27%;
+		margin-left:10%;
+		margin-top:7%;
+		padding-top: 25px;
+		padding-bottom: 25px;
+		border-radius: 30px;
+	}
+	input{
+		margin-left:25px;
+	}
+	input[type=password]{
+		margin-left:15px;
+	}
+	.navtop{
+		display:flex;
+	}
+</style>
+<div class="loginbox">
+<center>
+<h2>Login Page</h2>
+<h4>Enter the details to Login</h4>
+<h:form>
+<p>Enter Mail ID : <h:inputText value="#{loginbean.mail}" /></p>
+<p>Enter Password  : <h:inputSecret value="#{loginbean.password}" /></p>
+
+<h:commandButton action="#{loginbean.CheckCredentials()}" value="LogIn" />
+<br/>
+<br/>
+<h:commandLink action="SignUp" value="Don't Have an Account?, Create One here" />
+</h:form>
+</center>
+</div>
+</h:body>
+</html>

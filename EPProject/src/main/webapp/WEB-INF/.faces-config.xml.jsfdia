@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROCESS model-entity="JSFProcess">
+ <PROCESS-ITEM NAME="rules:#HomeAfLn.xhtml" PATH="/HomeAfLn.xhtml"
+  SHAPE="256,33,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#Login.xhtml" PATH="/Login.xhtml"
+  SHAPE="32,17,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#Login.xhtml:0" NAME="item"
+   PATH="/Login.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID="success:#{loginbean.CheckCredentials()}:#HomeAfLn.xhtml"
+    NAME="output" PATH="/HomeAfLn.xhtml" TARGET="rules:#HomeAfLn.xhtml"
+    TITLE="#{loginbean.CheckCredentials()}:success" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="fail:#{loginbean.CheckCredentials()}:#Login.xhtml"
+    NAME="output1" PATH="/Login.xhtml" TARGET="rules:#Login.xhtml"
+    TITLE="#{loginbean.CheckCredentials()}:fail" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+</PROCESS>

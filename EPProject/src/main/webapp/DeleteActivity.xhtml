@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+      
+<head>
+<title>Delete Activity</title>
+</head>
+<body>
+<style>
+	.db
+	{
+		background-color: #6a5f4b52;
+		color:white;
+	}
+	body
+	{
+	background-image: url("act.jpg");
+	color:white;
+	}
+	a
+	{
+		color: yellow;
+	}
+</style>
+<h1>Campus Activity Portal</h1>
+<div style="display:flex;">
+<h1>Campus Activity Portal</h1>
+<h:form style="margin-top: 3%; margin-left:68%; display:flex;">
+	<h:commandButton action="HomeAfLn" value="Go to home" /><br></br>
+	<h:commandButton action="home" value="Log Out" />
+</h:form>
+</div>
+<hr color = "red"/><hr color = "red"/>
+<h2>This page is to delete the exsisting activity</h2>
+<h:form>
+<label>Enter the id of event to delete:</label><h:inputText value="#{activitybean.activityid}"/>
+<br/>
+<h:commandButton action="#{activitybean.DeleteExistingEvent()}" value="Delete Activity" />
+<br/>
+<h:outputLabel value="#{activitybean.response}" />
+</h:form>
+<h:form>
+	<p><h:commandLink action="ModifyActivity" value="Modify Activity" color = "yellow"/></p>
+	<p><h:commandLink action="NewActivity" value="Add Activity" color = "yellow"/></p>
+	<p><h:commandLink action="DisplayActivities" value="Display Activities" color = "yellow"/></p>
+</h:form>
+
+</body>
+</html>

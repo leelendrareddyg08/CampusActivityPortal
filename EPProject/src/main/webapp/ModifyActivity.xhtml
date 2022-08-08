@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+      
+<head>
+<title>Modify Activity</title>
+</head>
+<body>
+<style>
+	.db
+	{
+		background-color: #6a5f4b52;
+		color:white;
+	}
+	body
+	{
+	background-image: url("act.jpg");
+	color:white;
+	}
+	a
+	{
+		color: yellow;
+	}
+</style>
+<div style="display:flex;">
+<h1>Campus Activity Portal</h1>
+<h:form style="margin-top: 3%; margin-left:68%; display:flex;">
+	<h:commandButton action="HomeAfLn" value="Go to home" /><br></br>
+	<h:commandButton action="home" value="Log Out" />
+</h:form>
+</div>
+<hr color = "red"/><hr color = "red"/>
+<h2>This page is to Modify an Activity</h2>
+<h:form>
+	<p><label>Enter the ID of the Event: </label><h:inputText value="#{activitybean.activityid}" /></p>
+	<p><label>Enter the Name of the Activity: </label><h:inputText value="#{activitybean.activityname}" /></p>
+	<p><label>Enter the Date of the Activity: </label><h:inputText value="#{activitybean.activitydate}" /></p>
+	<p><label>Enter the type of Event(Cultural/ Technical/ Dept. ): </label><h:inputText value="#{activitybean.activitytype}" /></p>
+	<p><label>Enter the Info about the event: </label><h:inputText value="#{activitybean.activityinfo}" /></p>
+	<p><h:commandButton action="#{activitybean.ModifyExistingEvent()}" value="Modify Event" /></p>
+	<p><h:outputLabel value="#{activitybean.response}" /></p>
+</h:form>
+<p>
+<h:form>
+	<p><h:commandButton action="HomeAfLn" value="Go to Home" color = "yellow"/></p>
+	<p><h:commandLink action="NewActivity" value="Add Activity" color = "yellow"/></p>
+	<p><h:commandLink action="DeleteActivity" value="Delete Activity" color = "yellow"/></p>
+	<p><h:commandLink action="DisplayActivities" value="Display Activities" color = "yellow"/></p>
+</h:form>
+</p>
+</body>
+</html>
