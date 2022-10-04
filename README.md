@@ -5,9 +5,9 @@ Campus Activity Portal is a project in which user(s) can give the info about the
 
 ## Technologies used
 
-**Front End:** Java Server Faces (JSF) with Cascading Style Sheets (CSS)\n
-**Back End:** Java Enterprise Edition (Java EE)\n
-**Database Technology:** MySQL
+**Front End:** Java Server Faces (JSF) with Cascading Style Sheets (CSS)
+    **Back End:** Java Enterprise Edition (Java EE)
+    **Database Technology:** MySQL
 
 ## Communication
 
