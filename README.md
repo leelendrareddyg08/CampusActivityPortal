@@ -5,13 +5,13 @@ Campus Activity Portal is a project in which user(s) can give the info about the
 
 ## Technologies used
 
-**Front End:** Java Server Faces (JSF) with Cascading Style Sheets (CSS)__
-**Back End:** Java Enterprise Edition (Java EE)__
+**Front End:** Java Server Faces (JSF) with Cascading Style Sheets (CSS)\n
+**Back End:** Java Enterprise Edition (Java EE)\n
 **Database Technology:** MySQL
 
 ## Communication
 
-The Project uses JSF (Java Server Faces) as the front end with the help of CSS. The backend was developed using JAVA EE. The connection between the JSF and the bussiness logic was done using the EJB (Enterprise Java Beans). The communication between the database and the application is done with the help of JPA (Java Persistence API). The database technology used was MySQL.
+The Project uses JSF as the front end with the help of CSS. The backend was developed using JAVA EE. The connection between the JSF and the bussiness logic was done using the EJB (Enterprise Java Beans). The communication between the database and the application is done with the help of JPA (Java Persistence API). The database technology used was MySQL.
 
 ## Project Life Cycle
 
